@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>  
+    <style>
+     
+       
+    </style>
+
+</head>
+<body>
+    <ul id="intro">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+  
+      
+      
+
+<script>
+
+
+// example of the inheritance 
+
+class Person {
+
+constructor (name,age){
+
+this.name=name;
+this.age=age;
+
+
+
+}
+
+show (){
+    console.log("I am parent calss method");
+}
+
+}
+
+// let p=new Person("Rahul",22,"Indore");
+
+// console.log(p);
+
+
+
+class rahul extends Person{
+
+    constructor(s,age,name2){
+
+        super(s);
+this.name2=name2
+this.age=age;
+
+    }
+
+    showChild(){
+        console.log("I am child method");
+
+        super.show(); 
+    }
+
+}
+
+
+
+
+
+let p2= new rahul("Rahul",22,"asdfasf")
+
+// console.log(p2)
+
+
+
+// example of the polyformafism
+class Animal {
+    sound1(){
+        throw new Error("draw() method must be implemented");
+    }
+}
+
+class Dog extends Animal {
+    sound2(){
+        console.log("Bark");
+    }
+}
+
+
+class Dog2 extends Dog {
+
+sound3(){
+    console.log("BHO BHO")
+}
+
+}
+
+
+// let p = new Animal()
+
+// console.log(p.sound1())
+
+
+
+// example of the abstraction
+
+class abstraction {
+
+start(){
+this.method1();
+this.method2();
+this.method3();
+
+
+
+}
+
+method1(){
+
+    console.log("method 1 is running")
+}
+
+
+method2(){
+
+    console.log("method 2 is running")
+}
+
+
+
+method3(){
+
+    console.log("method 3 is running")
+}
+
+
+
+method4(){
+
+    console.log("method 4 is running")
+}
+
+
+
+method5(){
+
+    console.log("method 5 is running")
+}
+
+
+}
+
+let p = new abstraction();
+
+// console.log(p.start())
+
+
+// incapsulation
+class Encapsulation {
+    #name;
+
+    constructor(name){
+        this.#name = name;
+    }
+
+    getName(){
+        return this.#name;
+    }
+}
+
+class Encapsulation2 extends Encapsulation {
+    constructor(name){
+        super(name);
+    }
+
+      test(){
+        console.log(this.#name); 
+    }
+}
+
+let obj = new Encapsulation2("rahul");
+
+console.log(obj.getName()); // ✅ rahul
+
+
+
+// static
+
+class MathUtils {
+    static add(a, b){
+        return a + b;
+    }
+}
+
+let m = new MathUtils.add(2,3);
+m.add(2,3); // ❌ error
+
+console.log(MathUtils.add(2,3)); // 5
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <div id="bb">
+        <input type="text" id="g">
+        <button id="b" class="a" style="color: red; " type="submit">click</button>
+        <!-- <input type="submit" id="b" value="click"> -->
+    </div>
+
+    <p id="p" class='aa'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, asperiores! Pariatur
+        saepe quasi ut neque doloribus eligendi aspernatur. Ad id, necessitatibus doloremque corporis aspernatur numquam
+        eos repudiandae maxime adipisci molestias!</p>
+    <script>
+
+
+
+        function removeRevolve(str) {
+            result = "";
+            vovels = "aeiouAEIOU"
+            count = 0
+
+            for (let i = 0; i < str.length; i++) {
+
+                if (!vovels.includes(str[i])) {
+
+                    result += str[i];
+                }else{
+                                        count++
+
+                }
+
+                        }
+return {result:result,count:count}
+        }
+
+        console.log(removeRevolve("hello world"))
+
+    </script>
+
+</body>
+
+</html>

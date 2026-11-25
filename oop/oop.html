@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>  
+    <style>
+     
+       
+    </style>
+
+</head>
+<body>
+    <ul id="intro">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+  
+      
+      
+
+<script>
+
+
+class Person{
+
+    constructor(name,f){
+
+        this.name=name;
+        // this.f=function(){
+        //     console.log("this is object function");
+        // }
+        
+
+    }
+    present(){
+        console.log("i am method of Person class");
+    }
+    msg(){
+        console.log("i am a Person Class similar class ");
+    }
+}
+
+// let p=new Person("Rahul",22,"Indore");
+
+// console.log(p);
+
+class Rahul extends Person{
+
+    constructor(s,father,g){
+        super(s);
+        this.father=father;
+           this.g=g;
+
+    }
+
+    show(){
+        console.log(" i am method of Rahul class ");
+        super.present();   //if you want to call prent call method in the child class method.
+        this.msg(); // if you want to call child class similar method in the child class.
+        super.msg(); //if you want to call parent class similar  method  in the child class.
+    }
+
+    msg(){
+
+        console.log(" i am a Rahul Class similar class ");
+
+    }
+
+}
+
+let r= new Rahul("Rahul","Ramgopal","gg",22,"Indore");
+
+console.log(r);
+
+// let data={
+//     name:'rahul',
+//     age:22
+// }
+
+// let p={
+//     sirname:"rohit",
+//     dead:80
+// }
+
+// let cloness = {...data,...p}
+
+// console.log(cloness);
+
+
+// cloning html Element
+
+// let ele= document.getElementById("intro");
+// let cloneele= ele.cloneNode(true);
+// cloneele.id="intro11";
+// document.body.appendChild(cloneele);
+
+
+// clonning with reference data type
+
+// Shalow Copy
+
+
+
+// let obj={
+//     name:"rahul",
+// }
+
+// let a = obj;
+// a.name="patidar"
+
+// console.log(obj);
+
+// 1st way with object.assign method
+
+// let obj1={
+//     name:"rahul",
+// }
+
+// let aa = Object.assign({},obj);
+// aa.name="patidar"
+
+// console.log(obj1);
+// console.log(aa);
+
+// 2nd way with spred operatore
+
+// let obj1={
+//     name:"rahul",
+// }
+
+// let aa = {...obj1};
+// aa.name="patidar"
+
+// console.log(obj1);
+// console.log(aa);
+
+
+//  Deep copy 
+
+// using json.parse and json.strigify method
+
+// let obj1={
+//     name:"rahul",
+//     location:{
+//         city:"INdore"
+//     }
+
+// }
+
+
+// let aa = JSON.parse(JSON.stringify(obj1));
+// aa.city="Rajgrah";
+// console.log(obj1);
+// console.log(aa);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
